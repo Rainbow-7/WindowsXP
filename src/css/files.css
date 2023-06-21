@@ -1,0 +1,93 @@
+#files-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.file{
+    height: 10vh;
+    width: 10vh;
+    margin:1vh;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.file:hover{
+    background-color: rgba(255,255,255,0.5); 
+}
+.file>.img-wrapper{
+    height: 80%;
+    width: 100%;
+}
+
+.file>.img-wrapper>img{
+    height: 100%;
+}
+
+.file-reset,
+.file-sure-btn,
+.file-input-lable {
+    --size: 10vh;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    text-align: center;
+    color: #999;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: -10px -10px 25px -10px rgba(230, 230, 230, 1),
+                10px 10px 25px -10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    overflow: hidden;
+    /* background-color: beige; */
+} 
+
+.file-input-lable {
+    border: none;
+    left: 10%;
+}
+.file-reset {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.file-reset:active,
+.file-sure-btn:active,
+.file-input-lable:active {
+    box-shadow: inset -10px -10px 25px -10px rgba(230, 230, 230, 1),
+    inset 10px 10px 25px -10px rgba(0, 0, 0, 0.15);
+} 
+/* #wallpaper {
+    position: relative;
+}
+#file-input-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    cursor: pointer;
+}
+*/
+#file-check,
+#file-input {
+    display: none;
+} 
+
+.preview {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #999;
+    background-size: cover;
+    overflow: hidden;
+}
+.preview>img {
+    width: 100%;
+}

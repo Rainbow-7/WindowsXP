@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: '楷体';
+    user-select: none;
+}
+body{
+    overflow: hidden;
+}
+#app{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../img/usual/bgi.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#files-wrapper{
+    height: 94%;
+    width: 100%;
+    /* background-color: rgba(179, 107, 12, 0.534); */
+}
+
+#navi-wrapper{
+    height: 6%;
+    width: 100%;
+    background:linear-gradient(to bottom,rgb(17,89,217),rgb(34,94,217));
+    /* box-shadow: 0 -1px 4px rgb(157, 183, 218); */
+    border-top: 4px solid rgb(57, 118, 197);
+    box-sizing: border-box;
+    /* display: flex; */
+    /* z-index: 100; */
+}
+
+#poweron-wrapper {
+    position: absolute;
+    top: 0;
+    height: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+.poweron-img-wrapper {
+    box-sizing:border-box;
+    width: 100%;
+    height: 70%;
+    /* background-color: #0049e466; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.poweron-img-wrapper>img:nth-child(1) {
+    flex-grow: 2;
+    /* width: 60%; */
+    margin-left: 12%;
+}
+.poweron-img-wrapper>img:nth-child(2),
+.poweron-img-wrapper>img:nth-child(3) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;    
+    /* 时刻记住，left优先级比right高 */
+}
+.poweron-img-wrapper>img:nth-child(3) {
+    left: 10px;
+}
+#poweron-wrapper>.load {
+    flex-grow: 1;
+    /* position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 40%;
+    height: 4%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 5px;
+    /* display: flex; */
+    overflow: hidden;
+}
+
+.load-items {
+    width: 80px;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    animation: loading-move 3s linear infinite;
+    transform:translateX(-100%);
+}
+.load-item {
+    margin: 0 2px;
+    flex-grow: 1;
+    height: 100%;
+    background-color: green;
+    
+}
+
+@keyframes loading-move {
+
+    100% {
+        transform: translateX(40vw);
+    }
+}
+

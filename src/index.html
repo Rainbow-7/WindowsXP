@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindowsXP</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navi.css">
+    <link rel="stylesheet" href="./css/files.css">
+    <link rel="stylesheet" href="./css/window.css">
+    <link rel="stylesheet" href="./css/snake.css">
+</head>
+<body>
+    <div id="app">
+        <div id="files-wrapper"> 
+            
+            <template id="template-file">
+                <div class="file">
+                    <div class="img-wrapper">
+                         <img src="../img/icon/我的电脑.png" alt="材质丢失">
+                    </div>
+                    <div class="file-name">电脑</div>
+                 </div>
+            </template>
+
+            <div class="file">
+               <div class="img-wrapper">
+                    <img src="../img/icon/我的电脑.png" alt="材质丢失">
+               </div>
+               <div class="file-name">我的电脑</div>
+            </div>
+            
+            <div class="file">
+                <div class="img-wrapper">
+                     <img src="../img/icon/浏览器.png" alt="材质丢失">
+                </div>
+                <div class="file-name">浏览器</div>
+             </div>
+
+             <div class="file">
+                <div class="img-wrapper">
+                     <img src="../img/icon/虚拟机.png" alt="材质丢失">
+                </div>
+                <div class="file-name">虚拟机</div>
+             </div>
+             
+             <div class="file">
+                <div class="img-wrapper">
+                     <img src="../img/icon/贪吃蛇.png" alt="材质丢失">
+                </div>
+                <div class="file-name">贪吃蛇</div>
+             </div>
+             <div class="file">
+                <div class="img-wrapper">
+                     <img src="../img/icon/记事本.png" alt="材质丢失">
+                </div>
+                <div class="file-name">记事本</div>
+             </div>
+             <div class="file">
+                <div class="img-wrapper">
+                     <img src="../img/icon/计算器.png" alt="材质丢失">
+                </div>
+                <div class="file-name">计算器</div>
+             </div>
+              <div class="file" id="wallpaper">
+                <div class="img-wrapper">
+                     <img src="../img/icon/壁纸.png" alt="材质丢失" for="file-input">
+                </div>
+                <div class="file-name" for="file-input">壁纸</div>
+                <!-- <input type="file" id="file-input"> -->
+                <!-- <label class="file" id="file-input-label" for="file-input"></label> -->
+            </div>
+        </div>
+        
+        <div id="navi-wrapper">
+            <div id="menu">
+                <div id = "popup">
+                    <div class = "user-info">
+                        <span id = "profile-photo">
+                            <img src="../img/usual/头像.jpg" alt="">
+                        </span>
+                    </div>
+                    <div class = "team-introduction">
+                        <div class="qrcode">
+                            <em style="font-weight: 800;color: #0049e4">WindowsXP网页版</em>
+                            <img src="../img/usual/QRcode.png" alt="二维码丢失">
+                            <div>扫描二维码</div>
+                            <div>加我好友聊天吧</div>
+                        </div>
+                        <div class="teamates">
+                            <div class="teamate-name">姜子杨</div>
+                        </div>
+                    </div>
+                    <div class = "sider"></div>
+                </div>
+                <img src="../img/icon/windowsXP.png" alt="windowsXP_icon">
+                <div class="menu-intro">开始</div>
+            </div>
+            <div id="taskbar">
+            </div>
+            <div id="toolbar">
+                <div id="clock"></div>
+                <div id="greet">
+                    <div class="code-tip"></div>
+                    <div class="button-frame">
+                        <div class="goto-code">码上就去</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="poweron-wrapper">
+            <div class="poweron-img-wrapper">
+                <img src="../img/usual/poweron.png" alt="WindowsXP图片">
+                <img src="../img/usual/poweron2-left.png" alt="WindowsXP图片">
+                <img src="../img/usual/poweron2-right.png" alt="WindowsXP图片">
+            </div>
+            <div class="load">
+                <div class="load-items">
+                    <span class="load-item"></span>
+                    <span class="load-item"></span>
+                    <span class="load-item"></span>
+                </div>
+            </div>
+            
+       </div>
+
+        <!-- <div class="file-window" style="color: black;">
+            <div class="window-name">窗口样例</div>
+            <div class="buttons-wrapper">
+                <button class="min-btn window-btn">-</button>
+                <button class="max-btn window-btn">□</button>
+                <button class="close-btn window-btn">X</button>
+            </div>
+            <div class="window-topbar">
+            </div>
+            <div class="window-content">
+
+            </div>
+        </div> -->
+    
+        
+        <template id="template-file-window">
+            <div class="file-window" style="color: black;">
+                <div class="window-name">窗口模板</div>
+                <div class="buttons-wrapper">
+                    <button class="min-btn window-btn">-</button>
+                    <button class="max-btn window-btn">□</button>
+                    <button class="close-btn window-btn">X</button>
+                </div>
+    
+                <div class="window-topbar">
+                    
+                </div>
+                <div class="window-content">
+                </div>
+            </div>
+        </template>
+    </div> 
+</body>
+<script src="./js/options.js"></script>
+<script src="./js/window.js"></script>
+<script src="./js/snake.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/request.js"></script>
+<script src="./js/navi.js"></script>
+
+
+</html>

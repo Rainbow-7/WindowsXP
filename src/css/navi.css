@@ -1,0 +1,229 @@
+#navi-wrapper {
+    display: flex;
+    font-size: 24px;
+}
+/* 菜单栏 */
+#menu{
+    height: 100%;
+    max-width: 30%;
+    background-color: #2f8d35;
+    padding-right: 2vw;
+    border-radius: 0 18px 18px 0;
+    border: 1px solid #000;
+    box-shadow: inset -1px 0 12px #030303;
+    box-sizing: border-box;
+    /* font-size: 22px; */
+    /* line-height: 100%; */
+    cursor: pointer;
+}
+#menu:hover {
+    background-color: rgb(14, 220, 121);
+}
+#menu>img{
+    height: 5.5vh;
+}
+#menu>.menu-intro{
+    display: inline-block;
+    height: 100%;
+    line-height: 1vh;
+    vertical-align: middle;
+    font-weight: 600;
+}
+/* 开始菜单弹窗 */
+#popup {
+    position: fixed;
+    display: none;
+    width: 20vw;
+    height: 53vh;
+    left: 0;
+    bottom: 7vh;
+    /* overflow: hidden; */
+}
+/* 用户信息 */
+#popup .user-info {
+    line-height: normal;
+    width: 100%;
+    min-width: 280px;
+    height: 13%;
+    background:linear-gradient(to bottom,#0147b1,#2888d6);
+    border-top: 4px solid #2a73e2;
+    box-shadow: 4px 0 rgb(87 95 99);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+}
+/* 用户头像框 */
+#profile-photo {
+    display: inline-block;
+    width: 18%;
+    height: 85%;
+    background-color: rgb(255, 251, 251);
+    border-radius: 5px;
+    margin: 5px 0 0 12px;
+    border-radius: 5px;
+}
+#profile-photo>img{
+    border-radius: 5px;
+}
+/* 用户头像图片 */
+#popup #profile-photo img {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+/* 队名 */
+#popup .user-info #team-name {
+    font-size: 32px;
+    vertical-align: middle;
+}
+/* 队伍介绍栏 */
+#popup .team-introduction {
+    width: 100%;
+    min-width: 280px;
+    height: 76%;
+    background-color: rgb(186, 215, 219);
+    border-top: 4px solid rgb(41, 48, 59);
+    border-bottom: 2.5px solid rgb(41, 48, 59);
+    box-shadow: 4px 0 rgb(87 95 99);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+/* 队伍介绍栏具体内容 */
+.team-introduction>.qrcode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 90%;
+    text-align: center;
+    align-items: center;
+    border-right: 1px solid #333;
+}
+.team-introduction>.qrcode img {
+    
+    width: 90%;
+}
+.team-introduction>.teamates {
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.team-introduction>.teamates div {
+    color: #000;       
+}
+#popup .sider {
+    width: 100%;
+    min-width: 280px;
+    height: 11%;
+    background:linear-gradient(to top,#0147b1,#2888d6);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 3px 0 rgb(87 95 99);
+}
+
+/* 任务栏 */
+#taskbar{
+    display: flex;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 6vh;
+    background-color: #0544ca;
+    margin-left: 2vw;
+}
+#taskbar>.task{
+    flex-grow: 1;
+    padding: 0 2px 0 2px;
+    max-width: 12vw;
+    min-width: 6vw;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/* 工具栏 */
+#toolbar{
+
+}
+
+/* 时间显示 */
+#clock{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 2px  1rem;
+    right: 0;
+    width: 10vw;
+    min-width: 180px;
+    height: 100%;
+    /* line-height: 1.3rem; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 15px;
+    background:linear-gradient(to bottom,rgb(13,136,235),rgb(1,121,209));
+    box-shadow: -2px -3px rgb(45,164,248);
+    font-size: 18px;
+    /* overflow: hidden; */
+    text-align: center;
+}
+/* 根据时间问候 */
+/* 根据时间问候 */
+#greet {
+    position: fixed;
+    width: 15vw;
+    min-width: 240px;
+    height: 36vh;
+    right: 2px;
+    bottom: 6vh;
+    background-image: url("../img/usual/早上.jfif");
+    background-size: cover;
+    overflow: hidden;
+    transition: 2s ease-in;
+    transform: translateX(80%);
+    animation: greet-join 0.7s linear forwards;
+}
+
+@keyframes greet-join {
+    100% {
+        transform:translateX(0);
+    }
+}
+
+#greet .code-tip {
+    margin: 10px 0 0 4px;
+    color: rgb(255, 255, 255);
+}
+#greet .button-frame {
+    width: 100%;
+    height: 80%;
+}
+#greet .goto-code {
+    position: absolute;
+    left: 50%;
+    bottom: 4vh;
+    transform: translate(-50%, -50%);
+    width: 7vw;
+    height: 4vh;
+    font-size: 18px;
+    text-align: center;
+    line-height: 4vh;
+    /* background:linear-gradient(to left,rgb(129,118,246),rgb(105,205,254)) ; */
+    background-color: rgb(129,118,246);
+    min-width: 120px;
+    border-radius: 15px;
+    transition: background-color 0.5s linear;
+    cursor: pointer;
+}
+#greet .goto-code:hover {
+    /* background:linear-gradient(to right,rgb(154, 146, 236),rgb(146, 207, 238)) ; */
+    background-color: rgb(105,205,254);
+}
